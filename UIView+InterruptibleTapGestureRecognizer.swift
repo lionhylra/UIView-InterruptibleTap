@@ -48,7 +48,7 @@ public extension UIView {
             return objc_getAssociatedObject(self, &AssociatedKeys.delegateKey) as? InterruptibleTapDelegate
         }
         set{
-            objc_setAssociatedObject(self, &AssociatedKeys.delegateKey, newValue as AnyObject, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN)
+            objc_setAssociatedObject(self, &AssociatedKeys.delegateKey, newValue as AnyObject, objc_AssociationPolicy.OBJC_ASSOCIATION_ASSIGN)
         }
     }
     func addInterruptibleTapGestureRecognizerWithDelegate(delegate:InterruptibleTapDelegate){
