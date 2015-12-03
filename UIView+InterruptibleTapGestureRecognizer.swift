@@ -32,7 +32,7 @@ import UIKit
 
 var touchResponsibleRange:CGFloat = 80.0
 
-@objc public protocol InterruptibleTapDelegate{
+@objc public protocol InterruptibleTapDelegate:class{
     optional func viewPressed(view:UIView!)
     optional func viewNotPressed(view:UIView!)
     optional func action(view:UIView!)
